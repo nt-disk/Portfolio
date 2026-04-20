@@ -633,14 +633,16 @@ button {
 }
 
 .portfolioPoint__item::before {
+  content: "";
   position: absolute;
-  top: 18px;
+  top: 50%;
   left: 18px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: linear-gradient(135deg, #8b7cff, #5be7ff);
-  content: "";
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .portfolioWorks__grid {
@@ -670,7 +672,6 @@ button {
     padding: 17px 18px 17px 42px;
   }
   .portfolioPoint__item::before {
-    top: 17px;
     left: 17px;
   }
   .portfolioSkill {
@@ -694,7 +695,6 @@ button {
     padding: 16px 16px 16px 40px;
   }
   .portfolioPoint__item::before {
-    top: 17px;
     left: 16px;
   }
   .portfolioSkill {
