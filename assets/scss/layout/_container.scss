@@ -1,0 +1,34 @@
+@use "../foundation/variables" as *;
+
+.mainContents {
+  display: block;
+}
+
+.container {
+  width: min(100% - 40px, $content-width);
+  margin-inline: auto;
+}
+
+.section {
+  padding: $space-3xl 0;
+}
+
+@media screen and (min-width: $breakpoint-tab-min) and (max-width: $breakpoint-tab-max) {
+  .container {
+    width: min(100% - 56px, $content-width);
+  }
+
+  .section {
+    padding: 84px 0;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sp) {
+  .container {
+    width: min(100% - 32px, $content-width);
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+}

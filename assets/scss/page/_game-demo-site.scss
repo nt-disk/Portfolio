@@ -1,0 +1,177 @@
+@use "../foundation/variables" as *;
+
+.gamePage {
+  background:
+    radial-gradient(circle at top right, rgba(91, 231, 255, 0.08), transparent 24%),
+    radial-gradient(circle at top left, rgba(139, 124, 255, 0.12), transparent 30%),
+    linear-gradient(180deg, #050914 0%, #0b1020 45%, #090d18 100%);
+}
+
+.gameMv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  padding: 140px 0 96px;
+  overflow: hidden;
+}
+
+.gameMv__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(5, 9, 20, 0.3) 0%, rgba(5, 9, 20, 0.72) 100%),
+    radial-gradient(circle at top center, rgba(91, 231, 255, 0.12), transparent 34%);
+  pointer-events: none;
+}
+
+.gameMv__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 18px;
+}
+
+.gameMv__label {
+  color: $color-accent-strong;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.gameMv__title {
+  font-size: clamp(3rem, 2.1rem + 4vw, 6.2rem);
+  line-height: 1;
+  letter-spacing: 0.14em;
+}
+
+.gameMv__catch {
+  font-size: clamp(1.2rem, 1rem + 0.8vw, 1.8rem);
+  line-height: 1.5;
+}
+
+.gameMv__text {
+  max-width: 700px;
+  color: $color-text-muted;
+}
+
+.gameMv__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.gameMv__release {
+  color: $color-accent-strong;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.gameStory__panel {
+  display: grid;
+  gap: 16px;
+  max-width: 840px;
+  padding: 32px 28px;
+  border: 1px solid $color-border;
+  border-radius: $radius-l;
+  background:
+    radial-gradient(circle at top right, rgba(139, 124, 255, 0.1), transparent 34%),
+    rgba(255, 255, 255, 0.04);
+}
+
+.gameStory__text {
+  color: $color-text-muted;
+}
+
+.gameCharacter__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.gameSpecial__box {
+  display: grid;
+  gap: 14px;
+  padding: 36px 32px;
+  border: 1px solid rgba(91, 231, 255, 0.18);
+  border-radius: $radius-l;
+  background:
+    radial-gradient(circle at top right, rgba(91, 231, 255, 0.1), transparent 30%),
+    linear-gradient(135deg, rgba(139, 124, 255, 0.08), rgba(255, 255, 255, 0.04));
+  text-align: center;
+}
+
+.gameSpecial__label {
+  color: $color-accent-strong;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.gameSpecial__title {
+  font-size: clamp(1.6rem, 1.3rem + 1vw, 2.2rem);
+  line-height: 1.4;
+}
+
+.gameSpecial__text {
+  max-width: 640px;
+  margin-inline: auto;
+  color: $color-text-muted;
+}
+
+@media screen and (min-width: $breakpoint-tab-min) and (max-width: $breakpoint-tab-max) {
+  .gameMv {
+    min-height: auto;
+    padding: 128px 0 84px;
+  }
+
+  .gameMv__inner {
+    gap: 16px;
+  }
+
+  .gameMv__text {
+    max-width: 620px;
+  }
+
+  .gameCharacter__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .gameStory__panel {
+    padding: 28px 24px;
+  }
+
+  .gameSpecial__box {
+    padding: 30px 24px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sp) {
+  .gameMv {
+    min-height: auto;
+    padding: 120px 0 80px;
+  }
+
+  .gameMv__inner {
+    gap: 14px;
+  }
+
+  .gameMv__buttons {
+    gap: 12px;
+  }
+
+  .gameCharacter__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gameStory__panel,
+  .gameSpecial__box {
+    padding: 24px 20px;
+  }
+}

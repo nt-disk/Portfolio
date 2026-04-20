@@ -1,0 +1,20 @@
+@use "../foundation/variables" as *;
+
+.sectionHeading {
+  margin-bottom: 28px;
+}
+
+.sectionHeading__label {
+  color: $color-accent-strong;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  margin-top: 6px;
+  font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.6rem);
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+}

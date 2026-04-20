@@ -1,0 +1,290 @@
+@use "../foundation/variables" as *;
+
+.companyPage {
+  background: #f7f7f8;
+  color: #222;
+}
+
+.companyPage .siteHeader {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid #e4e4e7;
+  backdrop-filter: blur(10px);
+}
+
+.companyPage .siteLogo {
+  color: #111;
+}
+
+.companyPage .globalNav__item a {
+  color: #555;
+}
+
+.companyPage .globalNav__item a:hover {
+  color: #111;
+}
+
+.companyPage .sectionHeading__label {
+  color: #666;
+  letter-spacing: 0.12em;
+}
+
+.companyPage .sectionTitle {
+  color: #111;
+}
+
+.companyMv {
+  padding: 144px 0 88px;
+  background: #ffffff;
+  border-bottom: 1px solid #ececf0;
+}
+
+.companyMv__inner {
+  display: grid;
+  gap: 16px;
+}
+
+.companyMv__label {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.companyMv__title {
+  color: #111;
+  font-size: clamp(2.4rem, 1.9rem + 2vw, 4rem);
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+}
+
+.companyMv__text {
+  max-width: 760px;
+  color: #555;
+}
+
+.companyTopics,
+.companyFeatured,
+.companyMedia,
+.companyBanner {
+  background: #f7f7f8;
+}
+
+.companyTopics__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.companyFeatured__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.companyBanner__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* company page only: common card tone adjustment */
+.companyPage .workCard,
+.companyPage .campaignBox {
+  border: 1px solid #e3e3e8;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.companyPage .workCard__body,
+.companyPage .campaignBox {
+  gap: 12px;
+}
+
+.companyPage .workCard__title,
+.companyPage .campaignBox__title {
+  color: #111;
+}
+
+.companyPage .workCard__text,
+.companyPage .campaignBox__text {
+  color: #555;
+}
+
+.companyPage .workCard__meta {
+  color: #666;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.companyPage .campaignBox {
+  max-width: 100%;
+  padding: 28px 24px;
+  background: #fff;
+}
+
+.companyPage .campaignBox__label {
+  color: #666;
+  letter-spacing: 0.1em;
+}
+
+.companyPage .button {
+  background: #111;
+  color: #fff;
+  box-shadow: none;
+}
+
+.companyPage .button:hover {
+  opacity: 0.9;
+  transform: none;
+}
+
+.companyPage .button--outline {
+  background: #fff;
+  color: #111;
+  border-color: #cfcfd6;
+}
+
+.companyPage .siteFooter {
+  border-top: 1px solid #e3e3e8;
+  background: #fff;
+}
+
+.companyPage .siteFooter__text,
+.companyPage .siteFooter__copy {
+  color: #666;
+}
+
+/* title lineup card */
+.titleLineCard {
+  overflow: hidden;
+  border: 1px solid #d8d8de;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.titleLineCard__image {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(180deg, #111 0%, #000 100%);
+}
+
+.titleLineCard__body {
+  display: grid;
+  gap: 12px;
+  padding: 18px 16px 16px;
+}
+
+.titleLineCard__title {
+  color: #111;
+  font-size: 1.4rem;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+.titleLineCard__date {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.titleLineCard__buttons {
+  display: grid;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.titleLineCard__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 12px 16px;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.titleLineCard__button:hover {
+  opacity: 0.9;
+}
+
+.titleLineCard__button--reserve {
+  background: #e60000;
+  color: #fff;
+}
+
+.titleLineCard__button--official {
+  background: #4a4a4f;
+  color: #fff;
+}
+
+@media screen and (min-width: $breakpoint-tab-min) and (max-width: $breakpoint-tab-max) {
+  .companyMv {
+    padding: 124px 0 80px;
+  }
+
+  .companyMv__inner {
+    gap: 14px;
+  }
+
+  .companyMv__text {
+    max-width: 680px;
+  }
+
+  .companyTopics__grid,
+  .companyFeatured__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .companyBanner__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .companyPage .campaignBox {
+    padding: 24px 20px;
+  }
+
+  .titleLineCard__title {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sp) {
+  .companyMv {
+    padding: 112px 0 72px;
+  }
+
+  .companyMv__inner {
+    gap: 14px;
+  }
+
+  .companyTopics__grid,
+  .companyFeatured__grid,
+  .companyBanner__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .companyPage .campaignBox {
+    padding: 22px 18px;
+  }
+
+  .titleLineCard__body {
+    padding: 16px 14px 14px;
+  }
+
+  .titleLineCard__title {
+    font-size: 1.2rem;
+  }
+
+  .titleLineCard__button {
+    min-height: 48px;
+    font-size: 0.95rem;
+  }
+}

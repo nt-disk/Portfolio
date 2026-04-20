@@ -1,0 +1,50 @@
+@use "../foundation/variables" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  padding: 14px 24px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(135deg, $color-accent, $color-accent-strong);
+  color: #08101d;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  box-shadow: 0 14px 30px rgba(91, 231, 255, 0.18);
+  transition:
+    opacity $transition,
+    transform $transition,
+    border-color $transition,
+    background-color $transition;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.button--outline {
+  background: transparent;
+  color: $color-text;
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow: none;
+}
+
+@media screen and (min-width: $breakpoint-tab-min) and (max-width: $breakpoint-tab-max) {
+  .button {
+    min-width: 164px;
+    padding: 13px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sp) {
+  .button {
+    min-width: 150px;
+    padding: 12px 20px;
+    font-size: 0.875rem;
+  }
+}

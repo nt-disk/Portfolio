@@ -1,0 +1,34 @@
+$color-bg: #0a0f1d;
+$color-bg-alt: #121a2f;
+$color-surface: rgba(255, 255, 255, 0.06);
+$color-surface-strong: rgba(255, 255, 255, 0.1);
+$color-border: rgba(255, 255, 255, 0.14);
+$color-text: #f5f7ff;
+$color-text-muted: #c7cde0;
+$color-accent: #8b7cff;
+$color-accent-strong: #5be7ff;
+$color-shadow: rgba(0, 0, 0, 0.35);
+
+$font-base: "Helvetica Neue", Arial, "Hiragino Sans",
+  "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+
+$content-width: 1120px;
+$header-height: 72px;
+
+$space-xs: 8px;
+$space-s: 12px;
+$space-m: 20px;
+$space-l: 32px;
+$space-xl: 48px;
+$space-2xl: 72px;
+$space-3xl: 100px;
+
+$radius-s: 10px;
+$radius-m: 16px;
+$radius-l: 24px;
+
+$transition: 0.3s ease;
+
+$breakpoint-sp: 767px;
+$breakpoint-tab-min: 768px;
+$breakpoint-tab-max: 1024px;

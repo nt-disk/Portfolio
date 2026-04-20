@@ -1,0 +1,17 @@
+@use "../foundation/variables" as *;
+
+.siteFooter {
+  padding: 32px 0 40px;
+  border-top: 1px solid $color-border;
+}
+
+.siteFooter__inner {
+  display: grid;
+  gap: 6px;
+}
+
+.siteFooter__text,
+.siteFooter__copy {
+  color: $color-text-muted;
+  font-size: 0.875rem;
+}

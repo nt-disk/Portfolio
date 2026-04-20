@@ -1,0 +1,84 @@
+@use "../foundation/variables" as *;
+
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  background: rgba(10, 15, 29, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.siteHeader--overlay {
+  position: absolute;
+  inset: 0 0 auto 0;
+  background: transparent;
+  border-bottom: none;
+}
+
+.siteHeader__inner {
+  min-height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-m;
+}
+
+.siteLogo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.globalNav__list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.globalNav__item a {
+  color: $color-text-muted;
+  font-size: 0.95rem;
+}
+
+.globalNav__item a:hover {
+  color: $color-text;
+}
+
+@media screen and (min-width: $breakpoint-tab-min) and (max-width: $breakpoint-tab-max) {
+  .siteHeader__inner {
+    min-height: 68px;
+  }
+
+  .globalNav__list {
+    gap: 18px;
+  }
+
+  .globalNav__item a {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sp) {
+  .siteHeader__inner {
+    min-height: 64px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  .globalNav {
+    width: 100%;
+  }
+
+  .globalNav__list {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .globalNav__item a {
+    font-size: 0.875rem;
+  }
+}

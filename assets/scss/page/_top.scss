@@ -1,0 +1,145 @@
+@use "../foundation/variables" as *;
+
+.portfolioMv {
+  padding: 160px 0 120px;
+}
+
+.portfolioMv__inner {
+  display: grid;
+  gap: 20px;
+}
+
+.portfolioMv__label {
+  color: $color-accent-strong;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.portfolioMv__title {
+  font-size: clamp(2.6rem, 1.8rem + 2.8vw, 4.8rem);
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+}
+
+.portfolioMv__text {
+  max-width: 760px;
+  color: $color-text-muted;
+  font-size: clamp(1rem, 0.92rem + 0.2vw, 1.125rem);
+}
+
+.portfolioMv__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.portfolioAbout__body {
+  display: grid;
+  gap: 16px;
+  max-width: 860px;
+}
+
+.portfolioAbout__text {
+  color: $color-text-muted;
+}
+
+.portfolioPoint__list {
+  display: grid;
+  gap: 14px;
+  max-width: 860px;
+}
+
+.portfolioPoint__item {
+  position: relative;
+  padding: 18px 20px 18px 44px;
+  border: 1px solid $color-border;
+  border-radius: $radius-m;
+  background: rgba(255, 255, 255, 0.04);
+  color: $color-text-muted;
+}
+
+.portfolioPoint__item::before {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $color-accent, $color-accent-strong);
+  content: "";
+}
+
+.portfolioWorks__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.portfolioSkill {
+  padding-bottom: 120px;
+}
+
+@media screen and (min-width: $breakpoint-tab-min) and (max-width: $breakpoint-tab-max) {
+  .portfolioMv {
+    padding: 136px 0 96px;
+  }
+
+  .portfolioMv__inner {
+    gap: 18px;
+  }
+
+  .portfolioMv__text {
+    max-width: 680px;
+  }
+
+  .portfolioWorks__grid {
+    gap: 20px;
+  }
+
+  .portfolioPoint__item {
+    padding: 17px 18px 17px 42px;
+  }
+
+  .portfolioPoint__item::before {
+    top: 17px;
+    left: 17px;
+  }
+
+  .portfolioSkill {
+    padding-bottom: 96px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sp) {
+  .portfolioMv {
+    padding: 120px 0 84px;
+  }
+
+  .portfolioMv__inner {
+    gap: 16px;
+  }
+
+  .portfolioMv__buttons {
+    gap: 12px;
+  }
+
+  .portfolioWorks__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolioPoint__item {
+    padding: 16px 16px 16px 40px;
+  }
+
+  .portfolioPoint__item::before {
+    top: 17px;
+    left: 16px;
+  }
+
+  .portfolioSkill {
+    padding-bottom: 72px;
+  }
+}

@@ -1,0 +1,218 @@
+@use "../foundation/variables" as *;
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tagList__item {
+  padding: 10px 16px;
+  border: 1px solid $color-border;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: $color-text-muted;
+  font-size: 0.95rem;
+}
+
+.workCard {
+  display: grid;
+  border: 1px solid $color-border;
+  border-radius: $radius-l;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 20px 40px $color-shadow;
+}
+
+.workCard__visual {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.workCard__visual--game {
+  background:
+    radial-gradient(circle at top, rgba(91, 231, 255, 0.18), transparent 36%),
+    linear-gradient(135deg, #111a35 0%, #1f2751 50%, #0e1630 100%);
+}
+
+.workCard__visual--company {
+  background:
+    radial-gradient(circle at top, rgba(139, 124, 255, 0.18), transparent 36%),
+    linear-gradient(135deg, #151b30 0%, #1a2440 50%, #101827 100%);
+}
+
+.workCard__visualText {
+  font-size: clamp(1.4rem, 1.1rem + 1vw, 2rem);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.workCard__body {
+  display: grid;
+  gap: 16px;
+  padding: 28px 24px 30px;
+}
+
+.workCard__title {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.workCard__text {
+  color: $color-text-muted;
+  font-size: 0.95rem;
+}
+
+.workCard__meta {
+  color: $color-accent-strong;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.workCard__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.textLink {
+  color: $color-accent-strong;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.newsList {
+  display: grid;
+  gap: 14px;
+}
+
+.newsList__item {
+  display: grid;
+  gap: 6px;
+  padding: 18px 20px;
+  border: 1px solid $color-border;
+  border-radius: $radius-m;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.newsList__date {
+  color: $color-accent-strong;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.newsList__title {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.characterCard {
+  border: 1px solid $color-border;
+  border-radius: $radius-l;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.characterCard__image {
+  min-height: 240px;
+  background:
+    radial-gradient(circle at top, rgba(91, 231, 255, 0.14), transparent 36%),
+    linear-gradient(180deg, #1d2446 0%, #111a30 100%);
+}
+
+.characterCard__body {
+  display: grid;
+  gap: 10px;
+  padding: 22px 20px 24px;
+}
+
+.characterCard__name {
+  font-size: 1.125rem;
+}
+
+.characterCard__text {
+  color: $color-text-muted;
+  font-size: 0.95rem;
+}
+
+.campaignBox {
+  display: grid;
+  gap: 14px;
+  padding: 28px 24px;
+  border: 1px solid rgba(91, 231, 255, 0.18);
+  border-radius: $radius-l;
+  background:
+    radial-gradient(circle at top right, rgba(91, 231, 255, 0.12), transparent 35%),
+    rgba(255, 255, 255, 0.04);
+}
+
+.campaignBox__label {
+  color: $color-accent-strong;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.campaignBox__title {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.campaignBox__text {
+  color: $color-text-muted;
+}
+
+@media screen and (min-width: $breakpoint-tab-min) and (max-width: $breakpoint-tab-max) {
+  .workCard__visual {
+    min-height: 200px;
+  }
+
+  .workCard__body {
+    padding: 24px 20px 26px;
+  }
+
+  .characterCard__image {
+    min-height: 210px;
+  }
+
+  .campaignBox {
+    padding: 26px 22px;
+  }
+
+  .campaignBox__title {
+    font-size: 1.35rem;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sp) {
+  .workCard__visual {
+    min-height: 180px;
+  }
+
+  .workCard__body {
+    padding: 24px 18px 24px;
+  }
+
+  .workCard__links {
+    gap: 12px;
+  }
+
+  .characterCard__image {
+    min-height: 180px;
+  }
+
+  .campaignBox {
+    padding: 22px 18px;
+  }
+
+  .campaignBox__title {
+    font-size: 1.25rem;
+  }
+}

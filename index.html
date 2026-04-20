@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio for SQUARE ENIX</title>
+    <meta
+      name="description"
+      content="公式サイト制作・ページ更新業務を想定したWeb制作ポートフォリオです。"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="siteHeader">
+      <div class="siteHeader__inner container">
+        <a href="./index.html" class="siteLogo">Portfolio</a>
+
+        <nav class="globalNav" aria-label="メインナビゲーション">
+          <ul class="globalNav__list">
+            <li class="globalNav__item"><a href="#about">About</a></li>
+            <li class="globalNav__item"><a href="#works">Works</a></li>
+            <li class="globalNav__item"><a href="#skills">Skills</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mainContents">
+      <section class="portfolioMv">
+        <div class="portfolioMv__inner container">
+          <p class="portfolioMv__label">Portfolio for SQUARE ENIX</p>
+          <h1 class="portfolioMv__title">Portfolio for SQUARE ENIX</h1>
+          <p class="portfolioMv__text">
+            公式サイト制作・更新業務を想定した実装例を掲載しています。<br />
+            静的ページ制作、既存ページ改修、レスポンシブ対応を中心にまとめました。
+          </p>
+
+          <div class="portfolioMv__buttons">
+            <a href="#works" class="button">作品を見る</a>
+            <a href="https://github.com/yourname" class="button button--outline">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section portfolioAbout">
+        <div class="container">
+          <div class="sectionHeading">
+            <p class="sectionHeading__label">Introduction</p>
+            <h2 class="sectionTitle">About</h2>
+          </div>
+
+          <div class="portfolioAbout__body">
+            <p class="portfolioAbout__text">
+              HTML / CSS / JavaScriptを用いた静的サイト制作を中心に学習・制作を行っています。
+            </p>
+            <p class="portfolioAbout__text">
+              既存デザインに沿ったコーディングや、ページ更新・改修を見据えた実装を意識し、
+              見やすさと保守性の両立を大切にしています。
+            </p>
+            <p class="portfolioAbout__text">
+              本ポートフォリオでは、エンタメ系公式サイト制作を想定した作品と、
+              既存ページ改修を想定したデモを掲載しています。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section portfolioPoint">
+        <div class="container">
+          <div class="sectionHeading">
+            <p class="sectionHeading__label">Matching Point</p>
+            <h2 class="sectionTitle">この募集に向けて意識した点</h2>
+          </div>
+
+          <ul class="portfolioPoint__list">
+            <li class="portfolioPoint__item">
+              HTML / CSS / JavaScriptを用いた静的ページ制作
+            </li>
+            <li class="portfolioPoint__item">
+              既存ページの更新・改修を想定した構成
+            </li>
+            <li class="portfolioPoint__item">
+              レスポンシブを前提とした実装
+            </li>
+            <li class="portfolioPoint__item">
+              保守しやすさを意識したシンプルな構造
+            </li>
+            <li class="portfolioPoint__item">
+              AIツールを補助的に活用しつつ、自身で検証・修正
+            </li>
+            <li class="portfolioPoint__item">Pugは基本構文を学習中</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="works" class="section portfolioWorks">
+        <div class="container">
+          <div class="sectionHeading">
+            <p class="sectionHeading__label">Selected Works</p>
+            <h2 class="sectionTitle">Works</h2>
+          </div>
+
+          <div class="portfolioWorks__grid">
+            <article class="workCard">
+              <div class="workCard__visual workCard__visual--game">
+                <span class="workCard__visualText">ASTRA CODE</span>
+              </div>
+
+              <div class="workCard__body">
+                <h3 class="workCard__title">架空ゲーム公式サイト風ページ</h3>
+                <p class="workCard__text">
+                  新規タイトルの公式サイトを想定し、エンタメ性と情報の見やすさを両立する形で制作した1ページ構成のデモです。
+                </p>
+                <p class="workCard__meta">HTML / CSS / JavaScript</p>
+
+                <div class="workCard__links">
+                  <a href="./works/game-demo-site/index.html" class="button">
+                    ページを見る
+                  </a>
+                  <a
+                    href="https://github.com/yourname/portfolio"
+                    class="textLink"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="workCard">
+              <div class="workCard__visual workCard__visual--company">
+                <span class="workCard__visualText">NOVA INTERACTIVE</span>
+              </div>
+
+              <div class="workCard__body">
+                <h3 class="workCard__title">架空ゲーム会社TOPページ</h3>
+                <p class="workCard__text">
+                  総合ゲーム会社のコーポレートTOPを想定し、トピックスや注目タイトル導線を整理したデモページです。
+                </p>
+                <p class="workCard__meta">HTML / CSS / JavaScript</p>
+
+                <div class="workCard__links">
+                  <a href="./works/game-company-site/index.html" class="button">
+                    ページを見る
+                  </a>
+                  <a
+                    href="https://github.com/yourname/portfolio"
+                    class="textLink"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section portfolioSkill">
+        <div class="container">
+          <div class="sectionHeading">
+            <p class="sectionHeading__label">Technical Stack</p>
+            <h2 class="sectionTitle">Skills</h2>
+          </div>
+
+          <ul class="tagList">
+            <li class="tagList__item">HTML</li>
+            <li class="tagList__item">CSS</li>
+            <li class="tagList__item">JavaScript</li>
+            <li class="tagList__item">Responsive Design</li>
+            <li class="tagList__item">Git / GitHub</li>
+            <li class="tagList__item">Photoshop 基本操作</li>
+            <li class="tagList__item">AI Tool</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="siteFooter">
+      <div class="siteFooter__inner container">
+        <p class="siteFooter__text">ご確認いただきありがとうございます。</p>
+        <small class="siteFooter__copy">&copy; 2026.4 Nemoto Daiuke</small>
+      </div>
+    </footer>
+  </body>
+</html>
